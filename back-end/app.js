@@ -29,6 +29,10 @@ app.use(cors());
 app.options('*', cors());
 app.use('/v1', routes);
 
+app.get('/v1/health', (req, res) => {
+  res.send({ health: 'Healthy', service: 'evallo-backend' });
+});
+
 app.use(passport.initialize());
 passport.use('jwt', jwtStrategy);
 
