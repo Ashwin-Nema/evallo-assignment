@@ -5,14 +5,6 @@ const logger = require('./config/logger');
 
 let server;
 
-async function create_listener() {
-  const builder = new ngrok.SessionBuilder();
-  const session = await builder.authtokenFromEnv().connect();
-  const listener = await session.httpEndpoint().listen();
-  console.log('Ingress established at:', listener.url());
-  listener.forward(`localhost:${config.port}`);
-}
-
 mongoose.connect(config.mongoose.url, config.mongoose.options).then(() => {
   logger.info('Connected to MongoDB');
   server = app.listen(config.port, () => {
