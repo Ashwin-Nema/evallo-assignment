@@ -1,0 +1,15 @@
+.calendar-modal-timpepicker {
+  .react-datepicker-popper {
+    z-index: 99 !important;
+  }
+
+  .time-dropdown-btn {
+    color: hsl(var(--nextui-primary) / var(--nextui-primary-opacity, var(--tw-text-opacity)));
+  }
+}
+
+.calendar-attendees {
+  svg {
+    pointer-events: all;
+  }
+}
