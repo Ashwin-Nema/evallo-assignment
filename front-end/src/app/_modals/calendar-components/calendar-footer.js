@@ -42,9 +42,9 @@ const CalendarFooter = ({ onClose, formDetails, refreshGetUser }) => {
         return;
       }
       toast.success(
-        `Event ${formDetails.id ? 'created' : 'updated'} successfully`
+        `Event ${formDetails.id ? 'updated' : 'created'} successfully`
       );
-      onClose(!!calendarId);
+      onClose(true);
     });
   };
 

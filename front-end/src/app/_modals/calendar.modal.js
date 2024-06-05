@@ -53,7 +53,7 @@ export const CalendarModal = ({ homeConfig, configHandler, getEvents }) => {
     }
 
     onClose();
-    setFormDetails(defaultCalendarModalDetails);
+    setFormDetails((prevDetails) => ({...defaultCalendarModalDetails}));
   };
 
   return (
